@@ -1,8 +1,0 @@
-# Inventario documental inicial. Completa con la sintaxis que espera
-# el script real y conserva únicamente controles implementados y probados.
-router:
-  controls: [R-01, R-02, R-03, R-04, R-05, R-06, R-07, R-08]
-switch:
-  controls: [S-01, S-02, S-03, S-04, S-05, S-06, S-07]
-firewall:
-  controls: [F-01, F-02, F-03, F-04, F-05, F-06, F-07]
