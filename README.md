@@ -23,17 +23,17 @@ Laboratorio de auditoría y hardening de infraestructura de red mediante un scri
 | Cisco Switch SW1 | `10.23.13.2` |
 | FortiGate FGT-01 | `10.23.13.129` |
 
-![Topología de red](docs/images/topologia.png)
-
-Consulta [la documentación de topología](docs/02-topologia-de-red.md).
+![Topología de red]<img width="547" height="467" alt="image" src="https://github.com/user-attachments/assets/f2e5e2a6-b3b9-4edd-bf17-43ef99a8b3c2" />
 
 ## Funcionamiento del script
 El flujo contempla dos modalidades:
 
-1. **Auditoría (solo lectura):** recopila información, evalúa las reglas configuradas y genera un informe sin aplicar cambios.
-2. **Aplicación y auditoría posterior:** realiza respaldos, aplica las reglas seleccionadas y vuelve a evaluar los dispositivos para generar el informe posterior.
+1. **Auditoría (solo lectura):** recopila información, evalúa las reglas configuradas y genera un informe sin aplicar cambios. <img width="1043" height="764" alt="image" src="https://github.com/user-attachments/assets/14873b64-6255-4d5f-b628-2b26cdf5aaab" />
 
-> Ejecuta los cambios únicamente en equipos propios o autorizados. Revisa las reglas y respaldos antes de aplicar cambios en producción.
+
+2. **Aplicación y auditoría posterior:** realiza respaldos, aplica las reglas seleccionadas y vuelve a evaluar los dispositivos para generar el informe posterior. <img width="1012" height="747" alt="image" src="https://github.com/user-attachments/assets/e17958fa-98e9-4d2b-a458-0a7e0882e3e2" />
+
+<img width="1574" height="710" alt="image" src="https://github.com/user-attachments/assets/a131eb1a-c9cc-4fdf-a0c0-abc7c15e0f66" />
 
 ## Requisitos
 - Ubuntu Server con Python 3.
@@ -50,18 +50,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Configuración
-1. Revisa `config/devices.yaml` y adapta los equipos a tu entorno.
-2. Revisa `config/rules.yaml` y confirma qué controles están implementados por el script.
-3. No guardes contraseñas en archivos versionados. Utiliza variables de entorno o el mecanismo seguro que implemente el script.
-4. Copia la versión funcional y probada de `cis_hardening.py` a `scripts/`.
-
 ## Ejecución
 Utiliza los argumentos que soporte la versión real del script. El diseño previsto contempla:
-- modo de auditoría sin cambios (`--audit`);
-- modo de aplicación con respaldo y auditoría posterior (`--apply`).
-
-Confirma `python3 scripts/cis_hardening.py --help` antes de ejecutar. No se deben asumir opciones adicionales que no estén implementadas.
+- modo de auditoría sin cambios 
+- modo de aplicación con respaldo y auditoría posterior 
 
 ## Resultados
 - `reports/auditoria-inicial/`: informes de auditoría sin aplicar reglas.
@@ -71,16 +63,6 @@ Confirma `python3 scripts/cis_hardening.py --help` antes de ejecutar. No se debe
 
 Los informes pueden reflejar estados como `PASS`, `FAIL`, `N/A` o `MANUAL`, según los controles realmente implementados.
 
-## Documentación
-- [Propósito](docs/01-proposito-del-laboratorio.md)
-- [Topología](docs/02-topologia-de-red.md)
-- [Metodología](docs/03-metodologia-de-auditoria.md)
-- [Recomendaciones CIS](docs/04-recomendaciones-cis.md)
-- [Hardening aplicado](docs/05-hardening-aplicado.md)
-- [Pruebas y validación](docs/06-pruebas-y-validacion.md)
-
-## Evidencias
-Añade capturas reales de la auditoría inicial, aplicación de reglas, auditoría posterior y pruebas de conectividad/administración. No incluyas contraseñas, claves privadas, tokens ni datos sensibles.
 
 ## Alcance y precisión
 La referencia a CIS indica que los controles se seleccionan y documentan tomando como base recomendaciones CIS aplicables al dispositivo. No implica certificación CIS ni cobertura completa de un Benchmark. Documenta para cada control la recomendación de referencia, el criterio técnico, el método de comprobación y el resultado observado.
