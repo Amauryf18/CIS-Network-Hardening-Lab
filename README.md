@@ -1,6 +1,6 @@
 # CIS Network Hardening Lab
 
-> **Video demostrativo:** [Ver video del laboratorio](video/VIDEO_DEMOSTRATIVO.md)
+> **Video demostrativo:** [Ver video del laboratorio](https://youtu.be/LzkHeIqYJ88)
 
 ## Descripción
 Laboratorio de auditoría y hardening de infraestructura de red mediante un script desarrollado en Python. El proyecto evalúa configuraciones y parámetros de seguridad seleccionados con base en recomendaciones CIS, permite generar una auditoría de solo lectura y, cuando corresponde, aplicar cambios autorizados y ejecutar una auditoría posterior.
