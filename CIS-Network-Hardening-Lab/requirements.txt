@@ -1,0 +1,4 @@
+netmiko
+paramiko
+PyYAML
+Jinja2
